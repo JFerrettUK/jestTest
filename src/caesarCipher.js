@@ -10,7 +10,19 @@ function caesarCipher(string, shiftFactor) {
   for (let i = 0; i < string.length; i++) {
     character = string.charAt(i);
 
-    if (character == " ") {
+    if (
+      character == " " ||
+      character == "," ||
+      character == "." ||
+      character == "!" ||
+      character == "?" ||
+      character == `"` ||
+      character == "'" ||
+      character == "~" ||
+      character == "@" ||
+      character == ":" ||
+      character == ";"
+    ) {
       result += character;
       continue;
     }
